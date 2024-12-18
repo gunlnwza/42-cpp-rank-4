@@ -1,7 +1,8 @@
 #include <iostream>
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name) : name(name)
+Zombie::Zombie(std::string name)
+    : name(name)
 {
     std::cerr << "Construct " << this->name << std::endl;
 }

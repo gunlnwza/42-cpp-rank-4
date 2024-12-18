@@ -3,11 +3,8 @@
 #define N 5
 #define NAME "zombie in the horde"
 
-int main(int argc, char **argv)
+int main(void)
 {
-    (void) argc;
-    (void) argv;
-
     Zombie *horde = zombieHorde(N, NAME);
 
     for (int i = 0; i < N; i++)

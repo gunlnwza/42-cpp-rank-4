@@ -1,10 +1,7 @@
 #include "Zombie.hpp"
 
-int main(int argc, char **argv)
+int main(void)
 {
-    (void) argc;
-    (void) argv;
-
     Zombie *zombie = newZombie("newZombie");
     zombie->announce();
     delete zombie;
