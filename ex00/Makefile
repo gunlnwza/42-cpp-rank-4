@@ -6,7 +6,7 @@ RM = rm -rf
 
 HEADERS = Zombie.hpp
 SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
-OBJS = $(SRCS:%.o=%.cpp)
+OBJS = $(SRCS:%.cpp=%.o)
 
 .PHONY: all clean fclean re
 
