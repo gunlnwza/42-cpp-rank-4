@@ -3,7 +3,7 @@
 
 Zombie::Zombie(void)
 {
-    std::cerr << "Construct " << "Zombie Object" << std::endl;
+    std::cerr << "Construct " << "<Zombie Object>" << std::endl;
 }
 
 Zombie::Zombie(std::string name) : name(name)
