@@ -1,4 +1,4 @@
-NAME = brainz
+NAME = moar_brainz
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
