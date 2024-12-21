@@ -3,23 +3,15 @@
 
 int main(void)
 {
-    Harl harl;
+    Harl        harl;
+    std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-    std::cout << "(DEBUG)" << std::endl;
-    harl.complain("DEBUG");
-    std::cout << std::endl;
-
-    std::cout << "(INFO)" << std::endl;
-    harl.complain("INFO");
-    std::cout << std::endl;
-
-    std::cout << "(WARNING)" << std::endl;
-    harl.complain("WARNING");
-    std::cout << std::endl;
-
-    std::cout << "(ERROR)" << std::endl;
-    harl.complain("ERROR");
-    std::cout << std::endl;
+    for (int i = 0; i < 4; i++)
+    {
+        std::cout << "(" << levels[i] << ")" << std::endl;
+        harl.complain(levels[i]);
+        std::cout << std::endl;
+    }
 
     return (0);
 }

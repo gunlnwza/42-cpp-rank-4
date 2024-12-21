@@ -3,22 +3,32 @@
 
 void Harl::complain(std::string level)
 {
-	if (level == "DEBUG")
-		Harl::debug();
-	else if (level == "INFO")
-		Harl::info();
-	else if (level == "WARNING")
-		Harl::warning();
-	else if (level == "ERROR")
-		Harl::error();
-	else
-		std::cout << "Wait. I confused myself!" << std::endl;
+	void (Harl::*funcs[])(void) = {
+		&Harl::debug,
+		&Harl::info,
+		&Harl::warning,
+		&Harl::error
+	};
+
+	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (level == levels[i])
+		{
+			(this->*funcs[i])();
+			return ;
+		}
+	}
+	std::cout << "Wait. I confused myself!" << std::endl;
 }
 
 void Harl::debug(void)
 {
 	std::cout
-		<< "I love having extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger."
+		<< "I love having extra bacon for my"
+		<< std::endl
+		<< "7XL-double-cheese-triple-pickle-special-ketchup burger."
 		<< std::endl
 		<< "I really do!"
 		<< std::endl;
